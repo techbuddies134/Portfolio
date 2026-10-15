@@ -42,12 +42,42 @@ export default function Portfolio() {
   ];
 
   const projects = [
-    { name: "Fork & Flame Cafe", type: "restaurant", desc: "Modern restaurant website with menu, gallery, contact form & Google Maps integration.", tech: ["Next.js", "Tailwind", "Framer Motion"], img: "🍽️", color: "from-red-500 to-orange-500", link: "#" },
-    { name: "Business Landing Page", type: "business", desc: "Professional business landing page with hero section, features & lead capture form.", tech: ["React", "Tailwind", "TypeScript"], img: "💼", color: "from-blue-500 to-purple-500", link: "#" },
-    { name: "E-Commerce Store", type: "ecommerce", desc: "Full-featured online store with cart, product filtering and secure checkout UI.", tech: ["Next.js", "Stripe", "Tailwind"], img: "🛒", color: "from-green-500 to-teal-500", link: "#" },
-    { name: "Personal Blog", type: "blog", desc: "Beautiful blogging platform with dark mode, comments and markdown support.", tech: ["Next.js", "MDX", "Tailwind"], img: "📝", color: "from-indigo-500 to-blue-500", link: "#" },
-    { name: "Portfolio Website", type: "portfolio", desc: "Modern developer portfolio with animations, project showcase and contact form.", tech: ["Next.js", "Framer Motion", "Tailwind"], img: "🎨", color: "from-pink-500 to-rose-500", link: "#" },
-    { name: "Mobile App Landing", type: "business", desc: "Sleek landing page for mobile app with feature showcase and download links.", tech: ["React", "Tailwind", "Framer Motion"], img: "📱", color: "from-violet-500 to-purple-500", link: "#" },
+    { 
+      name: "Fork & Flame Cafe", 
+      type: "restaurant", 
+      desc: "Modern restaurant website with menu, gallery, contact form & Google Maps integration.", 
+      tech: ["Next.js", "Tailwind", "Framer Motion"], 
+      image: "/fork-flame.jpg",
+      color: "from-red-500 to-orange-500", 
+      link: "https://fork-flame-5zj8.vercel.app/" 
+    },
+    { 
+      name: "Ottoman Restaurant", 
+      type: "restaurant", 
+      desc: "Elegant restaurant website with authentic menu, gallery and online reservation system.", 
+      tech: ["Next.js", "Tailwind", "Framer Motion"], 
+      image: "/ottoman.jpg",
+      color: "from-amber-500 to-red-500", 
+      link: "https://ottoman-resturant-so7q.vercel.app" 
+    },
+    { 
+      name: "Furniture House", 
+      type: "business", 
+      desc: "Modern furniture e-commerce website with product showcase, categories and sleek design.", 
+      tech: ["Next.js", "Tailwind", "Framer Motion"], 
+      image: "/furniture.jpg",
+      color: "from-amber-600 to-yellow-500", 
+      link: "https://furniture-house-ym92.vercel.app/" 
+    },
+    { 
+      name: "AttireAce Apparels", 
+      type: "ecommerce", 
+      desc: "Stylish clothing and apparel e-commerce store with modern UI and product catalog.", 
+      tech: ["Next.js", "Tailwind", "Framer Motion"], 
+      image: "/attireace.jpg",
+      color: "from-purple-500 to-pink-500", 
+      link: "https://attireaceapparels-imhl.vercel.app" 
+    },
   ];
 
   const filters = [
@@ -55,7 +85,6 @@ export default function Portfolio() {
     { id: "restaurant", name: "Restaurant" },
     { id: "business", name: "Business" },
     { id: "ecommerce", name: "E-Commerce" },
-    { id: "portfolio", name: "Portfolio" },
   ];
 
   const filteredProjects = activeFilter === "all"
@@ -175,58 +204,98 @@ export default function Portfolio() {
         </div>
       </section>
 
+      {/* ===== ABOUT / MEET THE TEAM (NEW DESIGN) ===== */}
       <section id="about" className="py-24">
         <div className="max-w-7xl mx-auto px-6">
-          <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-16">
+          <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-20">
             <span className="text-purple-400 font-semibold tracking-wider text-sm">ABOUT US</span>
             <h2 className="text-4xl md:text-5xl font-bold mt-2 mb-4">
               Meet The <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">Team</span>
             </h2>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 gap-8">
-            {/* Mubarak Saqib Card with Photo */}
-            <motion.div initial={{ opacity: 0, x: -50 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} className="bg-gradient-to-br from-gray-900 to-gray-800 border border-purple-500/20 rounded-3xl p-8">
-              <div className="flex items-center gap-4 mb-6">
-                <div className="w-20 h-20 rounded-full overflow-hidden shadow-lg shadow-purple-500/50 ring-4 ring-purple-500/50">
-                  <img src="mubarak.jpg.jpeg" alt="Mubarak Saqib" className="w-full h-full object-cover" />
-                </div>
-                <div>
-                  <h3 className="text-2xl font-bold text-white">Mubarak Saqib</h3>
-                  <p className="text-purple-400 text-sm">Full Stack Developer</p>
-                  <a href="tel:+923013178389" className="text-gray-400 text-xs hover:text-purple-400 transition">+92 301 3178389</a>
+          <div className="space-y-24">
+
+            {/* MUBARAK SAQIB — Photo Left, Intro Right */}
+            <motion.div 
+              initial={{ opacity: 0, y: 50 }} 
+              whileInView={{ opacity: 1, y: 0 }} 
+              viewport={{ once: true }} 
+              transition={{ duration: 0.7 }}
+              className="grid md:grid-cols-2 gap-12 items-center"
+            >
+              <div className="flex justify-center md:justify-start">
+                <div className="relative">
+                  <div className="absolute -inset-4 bg-gradient-to-br from-purple-500 to-pink-500 rounded-[2.5rem] blur-2xl opacity-30"></div>
+                  <div className="relative w-72 h-72 md:w-96 md:h-96 rounded-[2rem] overflow-hidden ring-2 ring-purple-500/50 shadow-2xl">
+                    <img src="mubarak.jpg.jpeg" alt="Mubarak Saqib" className="w-full h-full object-cover" />
+                  </div>
                 </div>
               </div>
-              <p className="text-gray-400 leading-relaxed mb-4">Creative developer with expertise in modern web technologies. Focused on building beautiful, functional websites.</p>
-              <div className="flex gap-3">
-                <a href="https://wa.me/923013178389" target="_blank" className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-purple-600 transition text-white font-bold text-xs">WA</a>
-                <a href="#" className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-purple-600 transition text-white font-bold text-xs">GH</a>
-                <a href="#" className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-purple-600 transition text-white font-bold text-xs">in</a>
+
+              <div className="text-center md:text-left">
+                <span className="text-purple-400 font-semibold tracking-wider text-xs uppercase">Founder & Lead Developer</span>
+                <h3 className="text-4xl md:text-5xl font-bold mt-3 mb-3 text-white">Mubarak Saqib</h3>
+                <div className="w-20 h-1 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full mx-auto md:mx-0 mb-6"></div>
+                <p className="text-purple-400 text-lg font-medium mb-4">Full Stack Web Developer</p>
+                <p className="text-gray-400 leading-relaxed mb-8">
+                  Creative developer with expertise in modern web technologies. Focused on building beautiful, functional websites that help businesses grow online. Specialized in React, Next.js, and Tailwind CSS with 2+ years of experience.
+                </p>
+                <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start items-center">
+                  <a href="tel:+923013178389" className="flex items-center gap-2 text-gray-300 hover:text-purple-400 transition font-medium bg-gray-900 px-5 py-3 rounded-full border border-gray-800">
+                    <Phone size={16} /> +92 301 3178389
+                  </a>
+                  <div className="flex gap-3">
+                    <a href="https://wa.me/923013178389" target="_blank" className="w-12 h-12 bg-gray-900 rounded-full flex items-center justify-center hover:bg-purple-600 transition text-white font-bold text-xs border border-gray-800">WA</a>
+                    <a href="#" className="w-12 h-12 bg-gray-900 rounded-full flex items-center justify-center hover:bg-purple-600 transition text-white font-bold text-xs border border-gray-800">GH</a>
+                    <a href="#" className="w-12 h-12 bg-gray-900 rounded-full flex items-center justify-center hover:bg-purple-600 transition text-white font-bold text-xs border border-gray-800">in</a>
+                  </div>
+                </div>
               </div>
             </motion.div>
 
-            {/* Umaish Mughal Card with Photo */}
-            <motion.div initial={{ opacity: 0, x: 50 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} className="bg-gradient-to-br from-gray-900 to-gray-800 border border-pink-500/20 rounded-3xl p-8">
-              <div className="flex items-center gap-4 mb-6">
-                <div className="w-20 h-20 rounded-full overflow-hidden shadow-lg shadow-pink-500/50 ring-4 ring-pink-500/50">
-                  <img src="umaish.jpg.jpeg" alt="Umaish Mughal" className="w-full h-full object-cover" />
-                </div>
-                <div>
-                  <h3 className="text-2xl font-bold text-white">Umaish Mughal</h3>
-                  <p className="text-pink-400 text-sm">Full Stack Developer</p>
-                  <a href="tel:+923297839783" className="text-gray-400 text-xs hover:text-pink-400 transition">+92 329 7839783</a>
+            {/* UMAISH MUGHAL — Intro Left, Photo Right */}
+            <motion.div 
+              initial={{ opacity: 0, y: 50 }} 
+              whileInView={{ opacity: 1, y: 0 }} 
+              viewport={{ once: true }} 
+              transition={{ duration: 0.7 }}
+              className="grid md:grid-cols-2 gap-12 items-center"
+            >
+              <div className="text-center md:text-right order-2 md:order-1">
+                <span className="text-pink-400 font-semibold tracking-wider text-xs uppercase">Co-Founder & Developer</span>
+                <h3 className="text-4xl md:text-5xl font-bold mt-3 mb-3 text-white">Umaish Mughal</h3>
+                <div className="w-20 h-1 bg-gradient-to-r from-pink-500 to-purple-500 rounded-full mx-auto md:ml-auto md:mr-0 mb-6"></div>
+                <p className="text-pink-400 text-lg font-medium mb-4">Full Stack Web Developer</p>
+                <p className="text-gray-400 leading-relaxed mb-8">
+                  Passionate about delivering pixel-perfect designs and smooth user experiences. Expert in creating responsive, fast, and modern web applications that leave a lasting impression on users and clients.
+                </p>
+                <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-end items-center">
+                  <div className="flex gap-3">
+                    <a href="https://wa.me/923297839783" target="_blank" className="w-12 h-12 bg-gray-900 rounded-full flex items-center justify-center hover:bg-pink-600 transition text-white font-bold text-xs border border-gray-800">WA</a>
+                    <a href="#" className="w-12 h-12 bg-gray-900 rounded-full flex items-center justify-center hover:bg-pink-600 transition text-white font-bold text-xs border border-gray-800">GH</a>
+                    <a href="#" className="w-12 h-12 bg-gray-900 rounded-full flex items-center justify-center hover:bg-pink-600 transition text-white font-bold text-xs border border-gray-800">in</a>
+                  </div>
+                  <a href="tel:+923297839783" className="flex items-center gap-2 text-gray-300 hover:text-pink-400 transition font-medium bg-gray-900 px-5 py-3 rounded-full border border-gray-800">
+                    <Phone size={16} /> +92 329 7839783
+                  </a>
                 </div>
               </div>
-              <p className="text-gray-400 leading-relaxed mb-4">Passionate about delivering pixel-perfect designs and smooth user experiences.</p>
-              <div className="flex gap-3">
-                <a href="https://wa.me/923297839783" target="_blank" className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-pink-600 transition text-white font-bold text-xs">WA</a>
-                <a href="#" className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-pink-600 transition text-white font-bold text-xs">GH</a>
-                <a href="#" className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-pink-600 transition text-white font-bold text-xs">in</a>
+
+              <div className="flex justify-center md:justify-end order-1 md:order-2">
+                <div className="relative">
+                  <div className="absolute -inset-4 bg-gradient-to-br from-pink-500 to-purple-500 rounded-[2.5rem] blur-2xl opacity-30"></div>
+                  <div className="relative w-72 h-72 md:w-96 md:h-96 rounded-[2rem] overflow-hidden ring-2 ring-pink-500/50 shadow-2xl">
+                    <img src="umaish.jpg.jpeg" alt="Umaish Mughal" className="w-full h-full object-cover" />
+                  </div>
+                </div>
               </div>
             </motion.div>
+
           </div>
         </div>
       </section>
+      {/* ===== END ABOUT SECTION ===== */}
 
       <section id="skills" className="py-24 bg-gray-900/50">
         <div className="max-w-7xl mx-auto px-6">
@@ -276,9 +345,23 @@ export default function Portfolio() {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {filteredProjects.map((project, i) => (
               <motion.div key={project.name} layout initial={{ opacity: 0, scale: 0.8 }} animate={{ opacity: 1, scale: 1 }} transition={{ delay: i * 0.1 }} whileHover={{ y: -8 }} className="group bg-gray-900 border border-gray-800 rounded-2xl overflow-hidden hover:border-purple-500/50 transition-all">
-                <div className={`h-48 bg-gradient-to-br ${project.color} flex items-center justify-center text-7xl relative overflow-hidden`}>
-                  <motion.div whileHover={{ scale: 1.2, rotate: 5 }} transition={{ type: "spring" }}>{project.img}</motion.div>
+                <div className={`h-56 relative overflow-hidden bg-gradient-to-br ${project.color} p-4 pt-6 flex items-center justify-center`}>
+                  <div className="relative w-full h-full rounded-t-md border-2 border-gray-800 overflow-hidden bg-gray-900 shadow-2xl">
+                    <div className="h-5 bg-gray-800 flex items-center gap-1 px-2 border-b border-gray-700">
+                      <div className="w-1.5 h-1.5 rounded-full bg-red-500"></div>
+                      <div className="w-1.5 h-1.5 rounded-full bg-yellow-500"></div>
+                      <div className="w-1.5 h-1.5 rounded-full bg-green-500"></div>
+                      <div className="ml-2 flex-1 h-3 bg-gray-900 rounded-sm opacity-60"></div>
+                    </div>
+                    <img 
+                      src={project.image} 
+                      alt={project.name} 
+                      className="w-full h-[calc(100%-1.25rem)] object-cover object-top group-hover:scale-105 transition-transform duration-500" 
+                    />
+                  </div>
+                  <div className="absolute bottom-2 left-1/2 -translate-x-1/2 w-[85%] h-1.5 bg-gray-800 rounded-b-md shadow-lg"></div>
                 </div>
+
                 <div className="p-6">
                   <h3 className="text-xl font-bold text-white mb-2">{project.name}</h3>
                   <p className="text-gray-400 text-sm mb-4">{project.desc}</p>
@@ -287,7 +370,7 @@ export default function Portfolio() {
                       <span key={t} className="text-xs bg-purple-500/10 text-purple-300 px-2 py-1 rounded-full border border-purple-500/30">{t}</span>
                     ))}
                   </div>
-                  <a href={project.link} className="inline-flex items-center gap-2 text-purple-400 hover:text-pink-400 font-medium text-sm transition">
+                  <a href={project.link} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-purple-400 hover:text-pink-400 font-medium text-sm transition">
                     View Project <ExternalLink size={14} />
                   </a>
                 </div>
