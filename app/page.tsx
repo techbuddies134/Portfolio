@@ -76,7 +76,7 @@ export default function Portfolio() {
       tech: ["Next.js", "Tailwind", "Framer Motion"], 
       image: "/attireace.jpg",
       color: "from-cyan-400 to-blue-500", 
-      link: "https://attireaceapparels-imhl.vercel.app" 
+      link: "https://attire-ace.vercel.app/" 
     },
   ];
 
