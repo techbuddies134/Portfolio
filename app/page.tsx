@@ -262,7 +262,7 @@ export default function Portfolio() {
               className="grid md:grid-cols-2 gap-12 items-center"
             >
               <div className="text-center md:text-right order-2 md:order-1">
-                <span className="text-cyan-400 font-semibold tracking-wider text-xs uppercase">Co-Founder & Developer</span>
+                <span className="text-cyan-400 font-semibold tracking-wider text-xs uppercase">FOUNDER & CREATIVE DIRECTOR</span>
                 <h3 className="text-4xl md:text-5xl font-bold mt-3 mb-3 text-white">Umaish Mughal</h3>
                 <div className="w-20 h-1 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full mx-auto md:ml-auto md:mr-0 mb-6"></div>
                 <p className="text-cyan-400 text-lg font-medium mb-4">Full Stack Web Developer</p>
