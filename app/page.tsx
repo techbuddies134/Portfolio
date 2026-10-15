@@ -392,7 +392,7 @@ export default function Portfolio() {
           <div className="grid md:grid-cols-2 gap-10 max-w-5xl mx-auto">
             <motion.div initial={{ opacity: 0, x: -50 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} className="space-y-5">
               {[
-                { icon: <Mail size={24} />, title: "Email", text: "hello@mubarikumaish.dev" },
+                { icon: <Mail size={24} />, title: "Email", text: "techbuddies134@gmail.com" },
                 { icon: <Phone size={24} />, title: "Mubarak Saqib", text: "+92 301 3178389" },
                 { icon: <Phone size={24} />, title: "Umaish Mughal", text: "+92 329 7839783" },
                 { icon: <MapPin size={24} />, title: "Location", text: "Daska, Punjab, Pakistan" },
