@@ -42,6 +42,27 @@ export default function Portfolio() {
   ];
 
   const projects = [
+    // NAYE PROJECTS YAHAN ADD KIYE HAIN
+    { 
+      name: "Tahzeeb Cafe", 
+      type: "restaurant", 
+      desc: "Daska's boldest BBQ & fast food experience. Charcoal-grilled, hand-crafted, served sizzling hot.", 
+      tech: ["Next.js", "Tailwind", "Framer Motion"], 
+      image: "/tahzeeb-cafe.jpg", // Photo ka naam public folder mein
+      color: "from-orange-500 to-red-600", 
+      link: "https://tahzeeb-cafe.vercel.app/" 
+    },
+    { 
+      name: "Late Night Craving", 
+      type: "restaurant", 
+      desc: "Delicious food delivered fresh right to your doorstep. Craving satisfied at any hour.", 
+      tech: ["Next.js", "Tailwind", "React"], 
+      image: "/late-night.jpg", // Photo ka naam public folder mein
+      color: "from-purple-500 to-pink-500", 
+      link: "https://late-night-craving.vercel.app/" 
+    },
+    
+    // PURANE PROJECTS
     { 
       name: "Fork & Flame Cafe", 
       type: "restaurant", 
