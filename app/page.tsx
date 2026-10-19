@@ -6,7 +6,7 @@ import {
   Menu as MenuIcon, X, ArrowRight, Phone, Mail, MapPin,
   Code, Palette, Rocket, MessageCircle, Send, ChevronUp,
   Award, Users, Briefcase, Heart, ExternalLink,
-  Monitor, Database, Zap
+  Monitor, Database, Zap, Star
 } from "lucide-react";
 
 export default function Portfolio() {
@@ -94,7 +94,7 @@ export default function Portfolio() {
   const stats = [
     { num: "25+", label: "Projects Done", icon: <Briefcase size={28} /> },
     { num: "15+", label: "Happy Clients", icon: <Users size={28} /> },
-    { num: "2+", label: "Years Experience", icon: <Award size={28} /> },
+    { num: "6+", label: "Years Experience", icon: <Award size={28} /> },
     { num: "100%", label: "Satisfaction", icon: <Heart size={28} /> },
   ];
 
@@ -181,8 +181,9 @@ export default function Portfolio() {
           </motion.h1>
 
           <motion.p initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.2 }} className="text-lg md:text-xl text-gray-400 max-w-2xl mx-auto mb-8">
-            Hi, we are <span className="text-blue-400 font-semibold">Mubarak Saqib</span> and{" "}
-            <span className="text-cyan-400 font-semibold">Umaish Mughal</span> — Full Stack Web Developers creating stunning digital experiences.
+            Hi, we are <span className="text-blue-400 font-semibold">Mubarak Saqib</span>,{" "}
+            <span className="text-cyan-400 font-semibold">Umaish Mughal</span> & our Lead Developer{" "}
+            <span className="text-purple-400 font-semibold">Abu Hurairah</span> — Full Stack Web Developers creating stunning digital experiences.
           </motion.p>
 
           <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.4 }} className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
@@ -217,6 +218,7 @@ export default function Portfolio() {
 
           <div className="space-y-24">
 
+            {/* 1. ABU HURAIRAH (Pic Left, Text Right) */}
             <motion.div 
               initial={{ opacity: 0, y: 50 }} 
               whileInView={{ opacity: 1, y: 0 }} 
@@ -226,34 +228,40 @@ export default function Portfolio() {
             >
               <div className="flex justify-center md:justify-start">
                 <div className="relative">
-                  <div className="absolute -inset-4 bg-gradient-to-br from-blue-500 to-cyan-400 rounded-[2.5rem] blur-2xl opacity-30"></div>
-                  <div className="relative w-72 h-72 md:w-96 md:h-96 rounded-[2rem] overflow-hidden ring-2 ring-blue-500/50 shadow-2xl">
-                    <img src="mubarak.jpg.jpeg" alt="Mubarak Saqib" className="w-full h-full object-cover" />
+                  <div className="absolute -inset-4 bg-gradient-to-br from-purple-500 to-pink-500 rounded-[2.5rem] blur-2xl opacity-30"></div>
+                  <div className="relative w-72 h-72 md:w-96 md:h-96 rounded-[2rem] overflow-hidden ring-2 ring-purple-500/50 shadow-2xl">
+                    <img src="developer.jpg.jpeg" alt="Abu Hurairah" className="w-full h-full object-cover" />
                   </div>
                 </div>
               </div>
 
               <div className="text-center md:text-left">
-                <span className="text-blue-400 font-semibold tracking-wider text-xs uppercase">Founder & Lead Developer</span>
-                <h3 className="text-4xl md:text-5xl font-bold mt-3 mb-3 text-white">Mubarak Saqib</h3>
-                <div className="w-20 h-1 bg-gradient-to-r from-blue-500 to-cyan-400 rounded-full mx-auto md:mx-0 mb-6"></div>
-                <p className="text-blue-400 text-lg font-medium mb-4">Full Stack Web Developer</p>
+                <div className="flex items-center justify-center md:justify-start gap-2 mb-2">
+                  <Star size={16} className="text-yellow-400 fill-yellow-400" />
+                  <span className="text-purple-400 font-semibold tracking-wider text-xs uppercase">Top Rated Freelancer</span>
+                </div>
+                <h3 className="text-4xl md:text-5xl font-bold mt-1 mb-3 text-white">Abu Hurairah</h3>
+                <div className="w-20 h-1 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full mx-auto md:mx-0 mb-6"></div>
+                <p className="text-purple-400 text-lg font-medium mb-4">Full Stack Software Developer</p>
                 <p className="text-gray-400 leading-relaxed mb-8">
-                  Creative developer with expertise in modern web technologies. Focused on building beautiful, functional websites that help businesses grow online. Specialized in React, Next.js, and Tailwind CSS with 2+ years of experience.
+                  More than 6 years of professional experience. A Top Rated Freelancer dedicated to building scalable, high-performance software and web applications. Master of backend architecture and seamless frontend integrations.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start items-center">
-                  <a href="tel:+923013178389" className="flex items-center gap-2 text-gray-300 hover:text-blue-400 transition font-medium bg-gray-900 px-5 py-3 rounded-full border border-gray-800">
-                    <Phone size={16} /> +92 301 3178389
+                  <a href="tel:+923075156558" className="flex items-center gap-2 text-gray-300 hover:text-purple-400 transition font-medium bg-gray-900 px-5 py-3 rounded-full border border-gray-800">
+                    <Phone size={16} /> +92 307 5156558
                   </a>
                   <div className="flex gap-3">
-                    <a href="https://wa.me/923013178389" target="_blank" className="w-12 h-12 bg-gray-900 rounded-full flex items-center justify-center hover:bg-blue-600 transition text-white font-bold text-xs border border-gray-800">WA</a>
-                    <a href="#" className="w-12 h-12 bg-gray-900 rounded-full flex items-center justify-center hover:bg-blue-600 transition text-white font-bold text-xs border border-gray-800">GH</a>
-                    <a href="#" className="w-12 h-12 bg-gray-900 rounded-full flex items-center justify-center hover:bg-blue-600 transition text-white font-bold text-xs border border-gray-800">in</a>
+                    <a href="https://www.fiverr.com/hurairah558" target="_blank" className="w-12 h-12 bg-gray-900 rounded-full flex items-center justify-center hover:bg-[#1dbf73] transition text-white font-bold text-xs border border-gray-800" title="Fiverr Profile">
+                      Fi
+                    </a>
+                    <a href="#" className="w-12 h-12 bg-gray-900 rounded-full flex items-center justify-center hover:bg-purple-600 transition text-white font-bold text-xs border border-gray-800">GH</a>
+                    <a href="#" className="w-12 h-12 bg-gray-900 rounded-full flex items-center justify-center hover:bg-purple-600 transition text-white font-bold text-xs border border-gray-800">in</a>
                   </div>
                 </div>
               </div>
             </motion.div>
 
+            {/* 2. MUBARAK SAQIB (Pic Right, Text Left) */}
             <motion.div 
               initial={{ opacity: 0, y: 50 }} 
               whileInView={{ opacity: 1, y: 0 }} 
@@ -262,30 +270,68 @@ export default function Portfolio() {
               className="grid md:grid-cols-2 gap-12 items-center"
             >
               <div className="text-center md:text-right order-2 md:order-1">
-                <span className="text-cyan-400 font-semibold tracking-wider text-xs uppercase">FOUNDER & CREATIVE DIRECTOR</span>
-                <h3 className="text-4xl md:text-5xl font-bold mt-3 mb-3 text-white">Umaish Mughal</h3>
-                <div className="w-20 h-1 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full mx-auto md:ml-auto md:mr-0 mb-6"></div>
-                <p className="text-cyan-400 text-lg font-medium mb-4">Full Stack Web Developer</p>
+                <span className="text-blue-400 font-semibold tracking-wider text-xs uppercase">Founder & Lead Developer</span>
+                <h3 className="text-4xl md:text-5xl font-bold mt-3 mb-3 text-white">Mubarak Saqib</h3>
+                <div className="w-20 h-1 bg-gradient-to-r from-blue-500 to-cyan-400 rounded-full mx-auto md:ml-auto md:mr-0 mb-6"></div>
+                <p className="text-blue-400 text-lg font-medium mb-4">Full Stack Web Developer</p>
                 <p className="text-gray-400 leading-relaxed mb-8">
-                  Passionate about delivering pixel-perfect designs and smooth user experiences. Expert in creating responsive, fast, and modern web applications that leave a lasting impression on users and clients.
+                  Creative developer with expertise in modern web technologies. Focused on building beautiful, functional websites that help businesses grow online. Specialized in React, Next.js, and Tailwind CSS with 2+ years of experience.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-end items-center">
                   <div className="flex gap-3">
-                    <a href="https://wa.me/923297839783" target="_blank" className="w-12 h-12 bg-gray-900 rounded-full flex items-center justify-center hover:bg-cyan-600 transition text-white font-bold text-xs border border-gray-800">WA</a>
-                    <a href="#" className="w-12 h-12 bg-gray-900 rounded-full flex items-center justify-center hover:bg-cyan-600 transition text-white font-bold text-xs border border-gray-800">GH</a>
-                    <a href="#" className="w-12 h-12 bg-gray-900 rounded-full flex items-center justify-center hover:bg-cyan-600 transition text-white font-bold text-xs border border-gray-800">in</a>
+                    <a href="https://wa.me/923013178389" target="_blank" className="w-12 h-12 bg-gray-900 rounded-full flex items-center justify-center hover:bg-blue-600 transition text-white font-bold text-xs border border-gray-800">WA</a>
+                    <a href="#" className="w-12 h-12 bg-gray-900 rounded-full flex items-center justify-center hover:bg-blue-600 transition text-white font-bold text-xs border border-gray-800">GH</a>
+                    <a href="#" className="w-12 h-12 bg-gray-900 rounded-full flex items-center justify-center hover:bg-blue-600 transition text-white font-bold text-xs border border-gray-800">in</a>
                   </div>
-                  <a href="tel:+923297839783" className="flex items-center gap-2 text-gray-300 hover:text-cyan-400 transition font-medium bg-gray-900 px-5 py-3 rounded-full border border-gray-800">
-                    <Phone size={16} /> +92 329 7839783
+                  <a href="tel:+923013178389" className="flex items-center gap-2 text-gray-300 hover:text-blue-400 transition font-medium bg-gray-900 px-5 py-3 rounded-full border border-gray-800">
+                    <Phone size={16} /> +92 301 3178389
                   </a>
                 </div>
               </div>
 
               <div className="flex justify-center md:justify-end order-1 md:order-2">
                 <div className="relative">
+                  <div className="absolute -inset-4 bg-gradient-to-br from-blue-500 to-cyan-400 rounded-[2.5rem] blur-2xl opacity-30"></div>
+                  <div className="relative w-72 h-72 md:w-96 md:h-96 rounded-[2rem] overflow-hidden ring-2 ring-blue-500/50 shadow-2xl">
+                    <img src="mubarak.jpg.jpeg" alt="Mubarak Saqib" className="w-full h-full object-cover" />
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+
+            {/* 3. UMAISH MUGHAL (Pic Left, Text Right) */}
+            <motion.div 
+              initial={{ opacity: 0, y: 50 }} 
+              whileInView={{ opacity: 1, y: 0 }} 
+              viewport={{ once: true }} 
+              transition={{ duration: 0.7 }}
+              className="grid md:grid-cols-2 gap-12 items-center"
+            >
+              <div className="flex justify-center md:justify-start">
+                <div className="relative">
                   <div className="absolute -inset-4 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-[2.5rem] blur-2xl opacity-30"></div>
                   <div className="relative w-72 h-72 md:w-96 md:h-96 rounded-[2rem] overflow-hidden ring-2 ring-cyan-400/50 shadow-2xl">
                     <img src="umaish.jpg.jpeg" alt="Umaish Mughal" className="w-full h-full object-cover" />
+                  </div>
+                </div>
+              </div>
+
+              <div className="text-center md:text-left">
+                <span className="text-cyan-400 font-semibold tracking-wider text-xs uppercase">FOUNDER & CREATIVE DIRECTOR</span>
+                <h3 className="text-4xl md:text-5xl font-bold mt-3 mb-3 text-white">Umaish Mughal</h3>
+                <div className="w-20 h-1 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full mx-auto md:mx-0 mb-6"></div>
+                <p className="text-cyan-400 text-lg font-medium mb-4">Full Stack Web Developer</p>
+                <p className="text-gray-400 leading-relaxed mb-8">
+                  Passionate about delivering pixel-perfect designs and smooth user experiences. Expert in creating responsive, fast, and modern web applications that leave a lasting impression on users and clients.
+                </p>
+                <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start items-center">
+                  <a href="tel:+923297839783" className="flex items-center gap-2 text-gray-300 hover:text-cyan-400 transition font-medium bg-gray-900 px-5 py-3 rounded-full border border-gray-800">
+                    <Phone size={16} /> +92 329 7839783
+                  </a>
+                  <div className="flex gap-3">
+                    <a href="https://wa.me/923297839783" target="_blank" className="w-12 h-12 bg-gray-900 rounded-full flex items-center justify-center hover:bg-cyan-600 transition text-white font-bold text-xs border border-gray-800">WA</a>
+                    <a href="#" className="w-12 h-12 bg-gray-900 rounded-full flex items-center justify-center hover:bg-cyan-600 transition text-white font-bold text-xs border border-gray-800">GH</a>
+                    <a href="#" className="w-12 h-12 bg-gray-900 rounded-full flex items-center justify-center hover:bg-cyan-600 transition text-white font-bold text-xs border border-gray-800">in</a>
                   </div>
                 </div>
               </div>
@@ -393,6 +439,7 @@ export default function Portfolio() {
                 { icon: <Mail size={24} />, title: "Email", text: "techbuddies134@gmail.com" },
                 { icon: <Phone size={24} />, title: "Mubarak Saqib", text: "+92 301 3178389" },
                 { icon: <Phone size={24} />, title: "Umaish Mughal", text: "+92 329 7839783" },
+                { icon: <Phone size={24} />, title: "Abu Hurairah", text: "+92 307 5156558" },
                 { icon: <MapPin size={24} />, title: "Location", text: "Daska, Punjab, Pakistan" },
               ].map((c) => (
                 <div key={c.title} className="flex items-start gap-4 p-5 bg-gray-900 rounded-2xl border border-gray-800 hover:border-blue-500/50 transition">
