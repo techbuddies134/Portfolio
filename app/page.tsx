@@ -61,6 +61,15 @@ export default function Portfolio() {
       color: "from-purple-500 to-pink-500", 
       link: "https://late-night-craving.vercel.app/" 
     },
+    { 
+      name: "Tayyaba Boutique", 
+      type: "ecommerce", 
+      desc: "Elegant boutique website showcasing stylish apparel collections with a modern, feminine and luxurious design.", 
+      tech: ["Next.js", "Tailwind", "Framer Motion"], 
+      image: "/tayyaba-boutique.jpg", // Photo ka naam public folder mein
+      color: "from-rose-500 to-pink-600", 
+      link: "https://tayyaba-boutique.vercel.app/" 
+    },
     
     // PURANE PROJECTS
     { 
